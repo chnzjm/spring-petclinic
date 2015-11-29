@@ -1,8 +1,11 @@
+---
 applications:
-- name: zjmdemo
+- name: petclinic
   memory: 512M
   instances: 1
+  host: petclinic-${random-word}
+  domain: mybluemix.net
   path: target/petclinic.war
-  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  buildpack: java_buildpack
   env:
     JBP_CONFIG_TOMCAT: '{tomcat: { version: 7.0.+ }}'
