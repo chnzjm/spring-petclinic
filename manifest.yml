@@ -1,7 +1,7 @@
 ---
 applications:
 - name: petclinic
-  memory: 512M
+  memory: 1024M
   instances: 1
   host: petclinic-${random-word}
   domain: mybluemix.net
